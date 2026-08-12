@@ -441,6 +441,14 @@ margin-top:10px;
         height:190px;
     }
 }
+#songMessage{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    min-height:35px;
+    margin-top:15px;
+}
 </style>
 </head>
 
@@ -475,6 +483,7 @@ margin-top:10px;
 <h2 id="cakeTitle">
 🎉 Happy Birthday Dear Saloni ❤️
 </h2>
+<div id="songMessage"></div>
 <div class="cake">
 
 <div class="plate"></div>
@@ -599,32 +608,43 @@ max-width:320px;">
 
     <div class="container finalBox">
 
-        <div class="confetti">🎉 ✨ 🎈 ✨ 🎉</div>
+        <h1>🎁 One Last Surprise 🎁</h1>
 
-        <h1>🎂 Happy Birthday Saloni ❤️</h1>
+        <p>Tap the gift box ❤️</p>
 
-        <p class="finalMessage">
-            You are so special! 💖
-        </p>
+        <div id="giftBox"
+             style="
+             font-size:130px;
+             cursor:pointer;
+             margin:30px 0;
+             animation:cakeFloat 2s ease-in-out infinite;
+             ">
+            🎁
+        </div>
 
-        <p class="finalMessage">
-            May your life always be filled with<br>
-            happiness, love and beautiful moments. ✨
-        </p>
+        <div id="finalContent" style="display:none;">
 
-        <div class="bigHeart">❤️</div>
-<button onclick="replaySurprise()">
-    🔄 Replay Surprise
-</button>
-        <p class="finalMessage">
-            This little surprise was made<br>
-            specially for you. 🥰
-        </p>
+            <div class="confetti">🎉 ✨ 🎈 ✨ 🎉</div>
+
+            <h1 id="finalTitle"></h1>
+
+            <p class="finalMessage" id="finalText1"></p>
+
+            <p class="finalMessage" id="finalText2"></p>
+
+            <div class="bigHeart">❤️</div>
+
+            <p class="finalMessage" id="finalText3"></p>
+
+            <button onclick="replaySurprise()">
+                🔄 Replay Surprise
+            </button>
+
+        </div>
 
     </div>
 
 </div>
-
 <script>
 const startBtn = document.getElementById("startBtn");
 const cakePage = document.getElementById("cakePage");
@@ -668,7 +688,9 @@ startBtn.onclick = function () {
             countdownScreen.style.display = "none";
 
             // 🎂 Cake show
+            
             cakePage.style.display = "block";
+            typeSongMessage("Please listen to the whole song ❤️", "songMessage");
         }
 
     }, 1000);
@@ -783,6 +805,74 @@ document.getElementById("galleryNext").onclick = function(){
 function replaySurprise() {
     location.reload();
 }
+function typeSongMessage(text, id){
+    let i = 0;
+    const target = document.getElementById(id);
+
+    target.innerHTML = "";
+
+    const typing = setInterval(function(){
+        target.innerHTML += text.charAt(i);
+        i++;
+
+        if(i >= text.length){
+            clearInterval(typing);
+        }
+    }, 70);
+}
+document.getElementById("giftBox").onclick = function(){
+
+    this.style.display = "none";
+
+    document.querySelector("#finalPage .container > p").style.display = "none";
+
+    document.getElementById("finalContent").style.display = "block";
+
+    typeFinalText("🎂 Happy Birthday Saloni ❤️", "finalTitle");
+
+    setTimeout(function(){
+        typeFinalText(
+            "You are so special! 💖",
+            "finalText1"
+        );
+    }, 1800);
+
+    setTimeout(function(){
+        typeFinalText(
+            "May your life always be filled with happiness, love and beautiful moments. ✨",
+            "finalText2"
+        );
+    }, 3500);
+
+    setTimeout(function(){
+        typeFinalText(
+            "This little surprise was made specially for you. 🥰",
+            "finalText3"
+        );
+    }, 6500);
+
+};
+
+
+function typeFinalText(text, id){
+
+    let i = 0;
+    const target = document.getElementById(id);
+
+    target.innerHTML = "";
+
+    const typing = setInterval(function(){
+
+        target.innerHTML += text.charAt(i);
+
+        i++;
+
+        if(i >= text.length){
+            clearInterval(typing);
+        }
+
+    }, 60);
+}
 </script>
 <div id="countdownScreen" style="
 display:none;
@@ -795,8 +885,11 @@ justify-content:center;
 color:white;
 font-size:90px;
 font-weight:bold;
+flex-direction:column;
 ">
-10
+
+    <div id="countdownNumber">10</div>
+
 </div>
 </body>
 </html>
