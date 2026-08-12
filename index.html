@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday Saloni ❤️</title>
-
 <style>
 
 *{
@@ -28,36 +25,35 @@ background:linear-gradient(135deg,#ff5f9e,#ff8fb1,#ffd6e7);
 .container{
 text-align:center;
 color:white;
-padding:30px;
-animation:fadeIn 1.5s;
+padding:25px;
+animation:fadeIn 1.2s;
 }
 
 h1{
-font-size:42px;
-line-height:1.4;
+font-size:38px;
 margin-bottom:20px;
 }
 
 p{
 font-size:22px;
-margin:12px 0;
+margin-top:10px;
 }
 
 button{
-margin-top:30px;
+margin-top:35px;
 padding:16px 35px;
 font-size:20px;
 border:none;
 border-radius:40px;
 background:white;
 color:#ff4081;
-cursor:pointer;
 font-weight:bold;
+cursor:pointer;
 transition:.3s;
 }
 
 button:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
 .hearts{
@@ -66,8 +62,8 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-overflow:hidden;
 pointer-events:none;
+overflow:hidden;
 }
 
 .hearts span{
@@ -77,435 +73,385 @@ font-size:30px;
 animation:float 10s linear infinite;
 }
 
-.hearts span:nth-child(1){left:8%;animation-duration:9s;}
-.hearts span:nth-child(2){left:20%;animation-duration:12s;}
-.hearts span:nth-child(3){left:35%;animation-duration:10s;}
+.hearts span:nth-child(1){left:8%;}
+.hearts span:nth-child(2){left:22%;animation-duration:12s;}
+.hearts span:nth-child(3){left:36%;animation-duration:9s;}
 .hearts span:nth-child(4){left:50%;animation-duration:11s;}
-.hearts span:nth-child(5){left:65%;animation-duration:9s;}
+.hearts span:nth-child(5){left:65%;animation-duration:10s;}
 .hearts span:nth-child(6){left:80%;animation-duration:13s;}
-.hearts span:nth-child(7){left:92%;animation-duration:10s;}
+.hearts span:nth-child(7){left:92%;animation-duration:9s;}
 
 @keyframes float{
-
 0%{
 transform:translateY(0);
 opacity:0;
 }
-
 20%{
 opacity:1;
 }
-
 100%{
 transform:translateY(-120vh);
 opacity:0;
 }
-
 }
 
 @keyframes fadeIn{
-
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 }
-
 to{
 opacity:1;
 transform:translateY(0);
 }
-
 }
+
+
+#cakeTitle{
+margin-bottom:20px;
+font-size:28px;
+color:white;
+}
+
+#wishText{
+font-size:20px;
+margin-top:15px;
+color:white;
+}
+
 .cake{
 position:relative;
-width:240px;
-height:220px;
-margin:30px auto;
+width:280px;
+height:290px;
+margin:20px auto;
+animation:cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+.plate{
+position:absolute;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+width:250px;
+height:22px;
+background:radial-gradient(circle,#f7f7f7,#d7d7d7);
+border-radius:50%;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 .layer{
 position:absolute;
 left:50%;
 transform:translateX(-50%);
-border-radius:18px;
-box-shadow:0 8px 15px rgba(0,0,0,.25);
+border-radius:22px;
+box-shadow:0 10px 18px rgba(0,0,0,.18);
 }
 
-.layer1{
-bottom:0;
-width:240px;
-height:70px;
-background:#ff8fb8;
+.bottom{
+bottom:20px;
+width:220px;
+height:75px;
+background:linear-gradient(to bottom,#ffb3c7,#ff7fa8);
 }
 
-.layer2{
-bottom:60px;
-width:190px;
-height:60px;
-background:#ffb8d0;
+.middle{
+bottom:95px;
+width:170px;
+height:65px;
+background:linear-gradient(to bottom,#ff9fc0,#ff6f9d);
 }
 
-.layer3{
-bottom:110px;
-width:140px;
-height:50px;
-background:#ffd6e7;
+.top{
+bottom:160px;
+width:120px;
+height:55px;
+background:linear-gradient(to bottom,#ff8ab6,#ff5d92);
 }
 
-.icing{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:150px;
-width:155px;
-height:22px;
-background:white;
-border-radius:18px;
-box-shadow:0 3px 6px rgba(0,0,0,.15);
-}
 
-.icing::before,
-.icing::after{
-content:"";
-position:absolute;
-bottom:-8px;
-width:18px;
-height:18px;
-background:white;
-border-radius:50%;
-}
-
-.icing::before{
-left:15px;
-}
-
-.icing::after{
-right:15px;
-}
-
-.cherry{
-position:absolute;
-width:14px;
-height:14px;
-background:#ff1744;
-border-radius:50%;
-top:40px;
-}
-
-.cherry1{left:75px;}
-.cherry2{left:112px;}
-.cherry3{left:149px;}
-
-.candle{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:165px;
-width:12px;
-height:50px;
-background:#87cefa;
-border-radius:8px;
-}
-
-#flame{
-position:absolute;
-top:-22px;
-left:50%;
-transform:translateX(-50%);
-width:16px;
-height:22px;
-background:orange;
-border-radius:50% 50% 50% 50%;
-display:none;
-animation:flicker .5s infinite alternate;
-}
-
-@keyframes flicker{
-
-from{
-transform:translateX(-50%) scale(1);
-}
-
-to{
-transform:translateX(-50%) scale(1.15);
-}
-
-}
-
-#cakeTitle{
-margin-bottom:20px;
-font-size:30px;
-animation:fadeIn 1s;
-}
-
-#balloonBtn{
-margin-top:20px;
-}
-#balloonPage{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(135deg,#ff7eb3,#ffb6c1,#ffd6e7);
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-}
-
-#balloonPage h1{
-color:white;
-margin-bottom:30px;
-font-size:32px;
-}
-
-.balloons{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-margin-top:35px;
-flex-wrap:nowrap;
-}
-
-.balloon{
-width:64px;
-height:90px;
-background:#ff4d6d;
-border-radius:50% 50% 48% 48%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:16px;
-font-weight:bold;
-color:white;
-cursor:pointer;
-box-shadow:0 8px 15px rgba(0,0,0,.25);
-transition:.3s;
-}
-
-.balloon:hover{
-transform:scale(1.08);
-}
-
-#balloonNext{
-margin-top:40px;
-}
-.special{
-width:100px;
-}
-#letterPage{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(135deg,#ff8fb1,#ffd6e7,#fff0f5);
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-#envelope{
-font-size:110px;
-cursor:pointer;
-animation:floatLetter 2s ease-in-out infinite;
-}
-
-#openLetterBtn{
-margin-top:20px;
-}
-
-#letter{
-display:none;
-width:85%;
-max-width:340px;
-background:#fffdf7;
-color:#444;
-padding:20px;
-border-radius:15px;
-margin-top:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-animation:letterOpen .8s ease;
-}
-
-#letterText{
-font-size:18px;
-line-height:1.8;
-white-space:pre-line;
-}
-
-@keyframes floatLetter{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-}
-
-@keyframes letterOpen{
-from{
-transform:translateY(-50px) scale(.8);
-opacity:0;
-}
-to{
-transform:translateY(0) scale(1);
-opacity:1;
-}
-}
-
-#giftPage{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(135deg,#ff5f9e,#ffd6e7);
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-#giftBox{
-font-size:120px;
-cursor:pointer;
-animation:giftFloat 2s infinite;
-}
-
-#tapGift{
-font-size:22px;
-color:white;
-}
-
-#finalMessage{
-color:white;
-}
-
-@keyframes giftFloat{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-15px);
-}
-
-100%{
-transform:translateY(0);
-}
-
-}
-#letterPage{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(135deg,#ff8fb1,#ffd6e7,#fff0f5);
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-#envelope{
-font-size:120px;
-animation:floatLetter 2s ease-in-out infinite;
-cursor:pointer;
-}
-
-#paper{
-display:none;
-width:90%;
-max-width:340px;
-background:white;
-color:#444;
-padding:25px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-margin:20px auto;
-animation:paperShow .6s ease;
-}
-
-#paper h3{
-color:#ff4081;
-margin-bottom:15px;
-}
-
-#letterText{
-font-size:18px;
-line-height:1.8;
-white-space:pre-line;
-}
-
-@keyframes floatLetter{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-}
-
-@keyframes paperShow{
-from{
-opacity:0;
-transform:translateY(30px) scale(.9);
-}
-to{
-opacity:1;
-transform:translateY(0) scale(1);
-}
-}
 .cream{
 position:absolute;
-width:18px;
-height:22px;
-background:white;
-border-radius:0 0 10px 10px;
-box-shadow:0 3px 6px rgba(0,0,0,.15);
+left:50%;
+transform:translateX(-50%);
+height:18px;
+background:#fff8ef;
+border-radius:50px;
+z-index:20;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+overflow:visible;
 }
 
-.cream1{
-left:85px;
-bottom:145px;
-}
-
-.cream2{
-left:112px;
-bottom:145px;
-}
-
-.cream3{
-left:139px;
-bottom:145px;
+.cream::before{
+content:"";
+position:absolute;
+top:-2px;
+left:0;
+width:100%;
+height:16px;
+background:linear-gradient(to bottom,#4b2a16,#2b160d);
+border-radius:50px;
 }
 
 .cream::after{
 content:"";
 position:absolute;
-bottom:-8px;
+top:10px;
 left:0;
-width:18px;
+width:100%;
 height:12px;
-background:white;
-border-radius:0 0 12px 12px;
+background:
+radial-gradient(circle at 10% 0,#2b160d 7px,transparent 8px),
+radial-gradient(circle at 30% 0,#2b160d 8px,transparent 9px),
+radial-gradient(circle at 50% 0,#2b160d 7px,transparent 8px),
+radial-gradient(circle at 70% 0,#2b160d 8px,transparent 9px),
+radial-gradient(circle at 90% 0,#2b160d 7px,transparent 8px);
+background-repeat:no-repeat;
+}
+
+.cream-bottom{
+bottom:88px;
+width:220px;
+}
+
+.cream-middle{
+bottom:153px;
+width:170px;
+}
+
+.cream-top{
+bottom:208px;
+width:120px;
+}
+.cream::before{
+content:"";
+position:absolute;
+left:0;
+top:12px;
+width:100%;
+height:10px;
+background:
+radial-gradient(circle at 12px -2px,#fff8ef 12px,transparent 13px) repeat-x;
+background-size:24px 12px;
+}
+.candle{
+position:absolute;
+left:50%;
+bottom:220px;
+transform:translateX(-50%);
+width:10px;
+height:40px;
+background:linear-gradient(to bottom,#8fdcff,#55c8ff);
+border-radius:5px;
+z-index:20;
+}
+
+#flame{
+display:none;
+position:absolute;
+top:-18px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:18px;
+background:radial-gradient(circle,#fff7a8,#ffb300,#ff6a00);
+border-radius:50% 50% 50% 50%;
+box-shadow:0 0 15px gold;
+animation:flicker .3s infinite alternate;
+
+}
+
+@keyframes flicker{
+from{
+transform:translateX(-50%) scale(1);
+}
+to{
+transform:translateX(-50%) scale(1.12);
+}
+}
+
+.paper{
+width:320px;
+min-height:420px;
+background:#fffdf8;
+margin:40px auto;
+padding:30px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,.18);
+color:#444;
+font-size:18px;
+line-height:1.8;
+text-align:left;
+font-family:Georgia,serif;
+}
+
+@keyframes paperOpen{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+#typeText{
+white-space:pre-line;
+}
+#letterContent{
+background:transparent !important;
+box-shadow:none !important;
+padding:0 !important;
+border:none !important;
+}
+
+.paper{
+width:320px;
+min-height:420px;
+background:#fffdf8;
+margin:40px auto;
+padding:30px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,.18);
+color:#444;
+font-size:18px;
+line-height:1.8;
+text-align:left;
+font-family:Georgia,serif;
+}
+#letterNext{
+display:block;
+margin:20px auto 30px;
+padding:14px 35px;
+border:none;
+border-radius:30px;
+background:#111;
+color:#ff4081;
+font-size:20px;
+font-weight:bold;
+}
+#galleryPage{
+    width:100%;
+    min-height:100vh;
+    text-align:center;
+}
+
+#galleryPage h2{
+    font-size:28px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.galleryBox{
+    width:320px;
+    height:300px;
+    margin:30px auto;
+    background:rgba(255,255,255,.25);
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+}
+
+#galleryNext{
+    margin-top:10px;
+}
+.balloonBox{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin-top:30px;
+}
+
+.balloon{
+font-size:85px;
+cursor:pointer;
+transition:.3s;
+user-select:none;
+}
+
+
+
+.balloonWord{
+font-size:22px;
+font-weight:bold;
+color:white;
+margin-top:10px;
+}
+#finalMessage{
+    background:rgba(255,255,255,.25);
+    padding:30px 20px;
+    border-radius:25px;
+    max-width:350px;
+    margin:30px auto;
+    color:white;
+    text-align:center;
+    animation:fadeIn 1.5s;
+}
+
+#finalMessage h2{
+    margin-bottom:20px;
+}
+
+#finalMessage p{
+    font-size:19px;
+    line-height:1.7;
+    margin:18px 0;
+}
+#galleryPage{
+    width:100%;
+    min-height:100vh;
+    overflow-y:auto;
+}
+
+.photoGallery{
+    width:90%;
+    max-width:600px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.photoGallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+#galleryNext{
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+@media(max-width:500px){
+    .photoGallery img{
+        height:190px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
 
-<h1>
-A Cutiepie was born today,<br>
-21 years ago! ❤️
-</h1>
+<div class="container" id="homePage">
 
-<p>Yes, it's YOU! 🥹</p>
+<h1>🎉 Happy Birthday Saloni ❤️</h1>
 
-<p>A little surprise awaits...</p>
+<p>A small surprise is waiting for you...</p>
 
 <button id="startBtn">
 ✨ Start the Surprise ✨
@@ -514,7 +460,6 @@ A Cutiepie was born today,<br>
 </div>
 
 <div class="hearts">
-
 <span>❤️</span>
 <span>💖</span>
 <span>💕</span>
@@ -522,297 +467,336 @@ A Cutiepie was born today,<br>
 <span>💝</span>
 <span>💞</span>
 <span>❤️</span>
-
-</div>
-<!-- Cake Page -->
-<div id="balloonPage" style="display:none;">
-
-<h1>🎈 Pop The Balloons 🎈</h1>
-
-<div class="balloons">
-
-<div class="balloon" data-word="YOU">🎈</div>
-<div class="balloon" data-word="ARE">🎈</div>
-<div class="balloon" data-word="SO">🎈</div>
-<div class="balloon special" data-word="SPECIAL">🎈</div>
-
-</div>
-
-<button id="balloonNext" style="display:none;">
-Next 💌
-</button>
-
 </div>
 <div id="cakePage" style="display:none;">
 
 <div class="container">
 
-<h2 id="cakeTitle" style="display:none;">
+<h2 id="cakeTitle">
 🎉 Happy Birthday Dear Saloni ❤️
 </h2>
-
 <div class="cake">
 
-<div class="layer layer1"></div>
+<div class="plate"></div>
 
-<div class="layer layer2"></div>
+<div class="layer bottom"></div>
+<div class="cream cream-bottom"></div>
 
-<div class="layer layer3"></div>
+<div class="layer middle"></div>
+<div class="cream cream-middle"></div>
 
-<div class="icing"></div>
-
-<div class="cherry cherry1"></div>
-<div class="cherry cherry2"></div>
-<div class="cherry cherry3"></div>
-
-<div class="cream cream1"></div>
-<div class="cream cream2"></div>
-<div class="cream cream3"></div>
+<div class="layer top"></div>
+<div class="cream cream-top"></div>
 <div class="candle">
-
-<div id="flame"></div>
+    <div id="flame"></div>
 </div>
 
 </div>
 
-<p class="wishText">
-✨ Make a wish and click Decorate ✨
+<p id="wishText">
+✨ Make a wish and tap Decorate ✨
 </p>
 
 <button id="decorateBtn">
 ✨ Decorate
 </button>
+<button id="nextBtn" style="display:none;">
+💌 Open Letter
+</button>
+</div>
 
-<button id="balloonBtn" style="display:none;">
-🎈 Pop The Balloons
+</div>
+<div id="letterPage" style="display:none;">
+
+<div class="container">
+
+<div id="envelopeBox" style="font-size:130px;">
+💌
+</div>
+
+<button id="openLetter" style="margin-top:20px;">
+Open Letter
+</button>
+
+<div id="letterContent"
+style="display:none;
+background:white;
+color:#444;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+text-align:left;
+max-width:320px;">
+
+<div class="paper">
+
+<p id="typeText"></p>
+
+</div>
+<button id="letterNext">
+    📸  Next
 </button>
 
 </div>
+</div>
 
 </div>
-<!-- Background Music -->
-
-<audio id="bgMusic" 
-src="Harry_s_Wondrous_World(128k).mp3" loop></audio>
-<!-- Letter Page -->
-<div id="letterPage" style="display:none;">
+<div id="galleryPage" style="display:none;">
 
     <div class="container">
 
-        <div id="envelopeBox">
+        <h2>📸 Saloni's Memories ❤️</h2>
 
-            <div id="envelope">
-                💌
-            </div>
+        <p>Some beautiful memories for you ✨</p>
 
+        <div class="photoGallery">
+
+            
+
+    <img src="gallry/IMG_20250518_004912_295.jpg">
+
+    <img src="gallry/IMG-20250128-WA0264.jpg">
+
+    <img src="gallry/IMG-20250330-WA0015.jpg">
+
+    <img src="gallry/IMG-20260303-WA0009.jpg">
+
+</div>          
         </div>
 
-        <button id="openLetterBtn">
-            📩 Open Letter
+        <button id="galleryNext">
+            🎈 Next
         </button>
-
-        <div id="paper" style="display:none;">
-
-            <h3>Dear Saloni ❤️</h3>
-
-            <p id="letterText"></p>
-
-            <button id="giftNextBtn" style="display:none;">
-                🎁 One Last Thing
-            </button>
-
-        </div>
 
     </div>
 
 </div>
-<!-- Final Gift Page -->
-
-<div id="giftPage" style="display:none;">
+<div id="balloonPage" style="display:none;">
 
 <div class="container">
 
-<h2>✨ One Last Thing.... ✨</h2>
+<h2>🎈 Pop the Balloons 🎈</h2>
 
-<div id="giftBox">
-🎁
+<p>Tap every balloon ❤️</p>
+
+<div class="balloonBox">
+
+<div class="balloon" data-word="YOU">🎈</div>
+<div class="balloon" data-word="ARE">🎈</div>
+<div class="balloon" data-word="SO">🎈</div>
+<div class="balloon" data-word="SPECIAL ❤️">🎈</div>
+
 </div>
 
-<p id="tapGift">
-Tap the gift 🎁
-</p>
-
-<div id="finalMessage" style="display:none;">
-
-<h2>
-Lots of love for you ❤️
-</h2>
-
-<p>
-Once again, Happy Birthday! 🎂<br>
-Hope you loved your surprise.
-</p>
-
-<button id="replayBtn">
-🔄 Replay Surprise
+<button id="balloonNext" style="display:none;">
+🎁 Next Surprise
 </button>
 
 </div>
 
 </div>
+<div id="finalPage" style="display:none;">
+
+    <div class="container finalBox">
+
+        <div class="confetti">🎉 ✨ 🎈 ✨ 🎉</div>
+
+        <h1>🎂 Happy Birthday Saloni ❤️</h1>
+
+        <p class="finalMessage">
+            You are so special! 💖
+        </p>
+
+        <p class="finalMessage">
+            May your life always be filled with<br>
+            happiness, love and beautiful moments. ✨
+        </p>
+
+        <div class="bigHeart">❤️</div>
+<button onclick="replaySurprise()">
+    🔄 Replay Surprise
+</button>
+        <p class="finalMessage">
+            This little surprise was made<br>
+            specially for you. 🥰
+        </p>
+
+    </div>
 
 </div>
+
 <script>
+const startBtn = document.getElementById("startBtn");
+const cakePage = document.getElementById("cakePage");
+const decorateBtn = document.getElementById("decorateBtn");
+const nextBtn = document.getElementById("nextBtn");
+const flame = document.getElementById("flame");
+const letterPage = document.getElementById("letterPage");
 
-const startBtn=document.getElementById("startBtn");
-const decorateBtn=document.getElementById("decorateBtn");
-const flame=document.getElementById("flame");
-const cakeTitle=document.getElementById("cakeTitle");
-const balloonBtn=document.getElementById("balloonBtn");
+const music = new Audio("song.mp3/birthday.mp3");
+music.loop = true;
 
-decorateBtn.onclick=function(){
+startBtn.onclick = function () {
 
-flame.style.display="block";
+    // 🎵 Music turant start
+    music.play().catch(() => {});
 
-cakeTitle.style.display="block";
+    // 🖤 Countdown screen show
+    const countdownScreen = document.getElementById("countdownScreen");
+    countdownScreen.style.display = "flex";
 
-document.querySelector(".wishText").style.display="none";
+    // Existing screen hide
+    document.getElementById("homePage").style.display = "none";
+    document.querySelector(".hearts").style.display = "none";
 
-decorateBtn.style.display="none";
+    let count = 10;
+    countdownScreen.innerHTML = count;
 
-balloonBtn.style.display="inline-block";
-balloonBtn.onclick=function(){
+    const timer = setInterval(function () {
 
-document.getElementById("cakePage").style.display="none";
+        count--;
 
-document.getElementById("balloonPage").style.display="flex";
+        if (count > 0) {
+            countdownScreen.innerHTML = count;
+        }
 
+        if (count === 0) {
+
+            clearInterval(timer);
+
+            // Countdown hide
+            countdownScreen.style.display = "none";
+
+            // 🎂 Cake show
+            cakePage.style.display = "block";
+        }
+
+    }, 1000);
 };
-};
-startBtn.onclick=function(){
-const music=document.getElementById("bgMusic");
-music.volume = 0.4;
-music.currentTime = 0;
-music.play().then(()=>{
-    console.log("Music Started");
-}).catch((err)=>{
-    alert(err);
-}); 
 
+decorateBtn.onclick = function () {
 
-document.querySelector(".container").style.display="none";
+    flame.style.display = "block";
 
-document.getElementById("cakePage").style.display="flex";
+    decorateBtn.style.display = "none";
 
-};
-const balloons=document.querySelectorAll(".balloon");
-const next=document.getElementById("balloonNext");
-const letterPage=document.getElementById("letterPage");
-const openLetterBtn=document.getElementById("openLetterBtn");
-const paper=document.getElementById("paper");
-const letterText=document.getElementById("letterText");
-const giftNextBtn=document.getElementById("giftNextBtn");
-let popped=0;
+    nextBtn.style.display = "inline-block";
 
-balloons.forEach(balloon=>{
-
-balloon.onclick=function(){
-
-this.innerHTML=this.dataset.word;
-
-this.style.background="transparent";
-this.style.boxShadow="none";
-this.style.border="none";
-this.style.color="#ff4081";
-
-this.style.fontSize="30px";
-this.style.fontWeight="bold";
-this.style.pointerEvents="none";
-
-popped++;
-
-if(popped===4){
-
-next.style.display="inline-block";
-
-}
+    nextBtn.innerHTML = "💌 Letter";
 
 };
 
-});
-next.onclick=function(){
+nextBtn.onclick = function () {
+    cakePage.style.display = "none";
+    letterPage.style.display = "block";
+};
+document.getElementById("openLetter").onclick = function(){
 
-document.getElementById("balloonPage").style.display="none";
+    document.getElementById("envelopeBox").style.display = "none";
 
-letterPage.style.display="flex";
-letterPage.style.justifyContent="center";
-letterPage.style.alignItems="center";
+    this.style.display = "none";
+
+    document.getElementById("letterContent").style.display = "block";
+
+    typeWriter(message,"typeText");
 
 };
+const message = `Dear Saloni ❤️
 
-const message=`Happy Birthday! 🎂
+Happy Birthday! 🎉
 
+Today is your special day.
+May every dream come true.
 May your smile always stay beautiful.
-May all your dreams come true.
-May happiness always stay with you. 
-Thank you for being so special.
+May happiness always be with you.
 
-Lots of love for you. ❤️`;
+Happy Birthday once again! ❤️`;
 
-openLetterBtn.onclick=function(){
-
-openLetterBtn.style.display="none";
-
-document.getElementById("envelope").style.display="none";
-
-paper.style.display="block";
+function typeWriter(text,id){
 
 let i=0;
-letterText.innerHTML="";
 
-const typing=setInterval(()=>{
+const target=document.getElementById(id);
 
-letterText.innerHTML+=message.charAt(i);
+target.innerHTML="";
+
+const typing=setInterval(function(){
+
+target.innerHTML += text.charAt(i);
 
 i++;
 
-if(i>=message.length){
-
+if(i>=text.length){
 clearInterval(typing);
-
-giftNextBtn.style.display="inline-block";
-
 }
 
 },35);
 
-};
-
-const giftBox = document.getElementById("giftBox");
-const tapGift = document.getElementById("tapGift");
-const finalMessage = document.getElementById("finalMessage");
-const replayBtn = document.getElementById("replayBtn");
-
-giftNextBtn.onclick = function(){
+}
+document.getElementById("letterNext").onclick = function(){
 
     document.getElementById("letterPage").style.display = "none";
-    document.getElementById("giftPage").style.display = "flex";
+
+    document.getElementById("galleryPage").style.display = "block";
 
 };
+const balloons = document.querySelectorAll(".balloon");
+let popped = 0;
 
-giftBox.onclick = function(){
+balloons.forEach(balloon => {
 
-    giftBox.style.display = "none";
-    tapGift.style.display = "none";
-    finalMessage.style.display = "block";
+    balloon.onclick = function(){
+
+        if(this.classList.contains("pop")) return;
+
+        this.innerHTML = this.dataset.word;
+
+this.style.fontSize = "28px";
+this.style.color = "white";
+this.style.fontWeight = "bold";
+this.style.background = "transparent";
+
+popped++;
+
+        if(popped === 4){
+            document.getElementById("balloonNext").style.display = "inline-block";
+        }
+
+    };
+
+});
+
+document.getElementById("balloonNext").onclick = function(){
+
+    document.getElementById("balloonPage").style.display = "none";
+
+    document.getElementById("finalPage").style.display = "block";
 
 };
-replayBtn.onclick = function(){
+document.getElementById("galleryNext").onclick = function(){
 
+    document.getElementById("galleryPage").style.display = "none";
+
+    document.getElementById("balloonPage").style.display = "block";
+
+};
+function replaySurprise() {
     location.reload();
-
-};
+}
 </script>
+<div id="countdownScreen" style="
+display:none;
+position:fixed;
+inset:0;
+background:#000;
+z-index:9999;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:90px;
+font-weight:bold;
+">
+10
+</div>
 </body>
-
 </html>
